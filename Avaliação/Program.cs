@@ -11,28 +11,31 @@ namespace Avaliação
         static void Main(string[] args)
         {
             Fibonacci();
-            Console.ReadLine();
         }
         static void Fibonacci()
         {
+            Inicio:
             Console.WriteLine("Insira um número para checar se ele está na sequência de Fibonacci");
-            int a = 0, fibo = 1, num = int.Parse(Console.ReadLine()), resultado = 0;
+            int a = 0, fibo = 1, num = int.Parse(Console.ReadLine()), atual = 0;
+            
             while (fibo <= num)
             {
                 Console.Write(a + " " + fibo + " ");
                 a = a + fibo;
                 fibo = fibo + a;
-                resultado = fibo - a;
+                atual = fibo - a;
             }
-            if (num == resultado)
+            if (num == atual)
             {
                 Console.WriteLine($"\nO número {num} está presente na sequência de Fibonacci");
             }
             else
             {
                 Console.Write(fibo);
-                Console.WriteLine($"\nO número {num} nâo está presente na sequência de Fibonacci");
+                Console.WriteLine($"\nO número {num} nâo está presente na sequência de Fibonacci");    
             }
+            Console.ReadLine();
+            goto Inicio;
         }
     }
 }
