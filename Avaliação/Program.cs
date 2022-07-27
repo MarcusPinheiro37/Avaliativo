@@ -10,32 +10,11 @@ namespace Avaliação
     {
         static void Main(string[] args)
         {
-            Fibonacci();
+            fatEmpresa();
         }
-        static void Fibonacci()
+        static void fatEmpresa()
         {
-            Inicio:
-            Console.WriteLine("Insira um número para checar se ele está na sequência de Fibonacci");
-            int a = 0, fibo = 1, num = int.Parse(Console.ReadLine()), atual = 0;
-            
-            while (fibo <= num)
-            {
-                Console.Write(a + " " + fibo + " ");
-                a = a + fibo;
-                fibo = fibo + a;
-                atual = fibo - a;
-            }
-            if (num == atual)
-            {
-                Console.WriteLine($"\nO número {num} está presente na sequência de Fibonacci");
-            }
-            else
-            {
-                Console.Write(fibo);
-                Console.WriteLine($"\nO número {num} nâo está presente na sequência de Fibonacci");    
-            }
-            Console.ReadLine();
-            goto Inicio;
+            float sp = 67836.43f, rj = 36678.66f, mg = 29229.88f, es = 27165.48f, anot = 19849.53f; 
         }
     }
 }
